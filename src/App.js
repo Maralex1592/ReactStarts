@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Weatherlocation from './components/Weatherlocation'
+import WeatherLocation from './components/WeatherLocation'
 import OtherComponent from './components/OtherComponent'
 import './App.css';
 
@@ -8,7 +8,7 @@ class App extends Component{
     return (
       <div className="App">
         Weather APP.... It Works
-        <Weatherlocation />
+        <WeatherLocation />
         <OtherComponent />
       </div>
     );
