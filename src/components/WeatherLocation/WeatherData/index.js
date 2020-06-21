@@ -7,12 +7,12 @@ import {
 import './styles.css'
 
 const WeatherData = () =>(
-    <div className="WeatherDataCont" >
-        <WeatherExtraInfo humidity={70} wind={"10 km/h"}/>
+    <div className="weatherDataCont" >
         <WeatherTemperature 
             temperature={20}
             weatherState={CLOUDY}
         />
+        <WeatherExtraInfo humidity={70} wind={"10 km/h"}/>
     </div>
 );
 

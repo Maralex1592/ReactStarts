@@ -5,10 +5,9 @@ import './styles.css'
 //Get parameters using destructuring
 const WeatherExtraInfo = ({humidity, wind}) => (
     //Use template String, sintax = "`${var} ${const}`"
-<div className="WeatherExtraInfoCont" >
+<div className="weatherExtraInfoCont" >
     <span>{`${humidity} % - `}</span>
     <span>{`${wind} Wind`}</span>
-    
 </div>
 );
 
