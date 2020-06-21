@@ -4,9 +4,10 @@ import WeatherTemperature from './WeatherTeperature'
 import {
     CLOUDY,
 } from './../../../constants/weather';
+import './styles.css'
 
 const WeatherData = () =>(
-    <div>
+    <div className="WeatherDataCont" >
         <WeatherExtraInfo humidity={70} wind={"10 km/h"}/>
         <WeatherTemperature 
             temperature={20}
