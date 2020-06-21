@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 //Get parameters using destructuring
 const WeatherExtraInfo = ({humidity, wind}) => (
@@ -9,4 +10,9 @@ const WeatherExtraInfo = ({humidity, wind}) => (
     
 </div>
 );
+
+WeatherExtraInfo.propTypes = {
+    humidity: PropTypes.number.isRequired,
+    wind: PropTypes.string.isRequired,
+}
 export default WeatherExtraInfo;
