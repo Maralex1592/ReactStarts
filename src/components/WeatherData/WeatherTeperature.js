@@ -1,6 +1,6 @@
 import React from 'react'
 import WeatherIcons from 'react-weathericons'
-import 'weather-icons/css/weather-icons.css';
+import './node_modules/weather-icons/css/weather-icons.css';
 import PropTypes from 'prop-types';
 import {
     SUNNY,
@@ -9,7 +9,7 @@ import {
     THUNDERSTORM,
     WINDY,
     RAIN,
-} from './../constants/weather';
+} from '../../../constants/weather';
 
 const icons = {
     [SUNNY] : "day-sunny",
