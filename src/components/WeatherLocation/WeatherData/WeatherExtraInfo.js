@@ -6,8 +6,8 @@ import './styles.css'
 const WeatherExtraInfo = ({humidity, wind}) => (
     //Use template String, sintax = "`${var} ${const}`"
 <div className="weatherExtraInfoCont" >
-    <span>{`${humidity} % - `}</span>
-    <span>{`${wind} Wind`}</span>
+    <span className="extraInfoText">{`${humidity} % - `}</span>
+    <span className="extraInfoText">{`${wind}`}</span>
 </div>
 );
 
