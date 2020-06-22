@@ -4,7 +4,6 @@
     height: 100px;
     line-height: 140px;
     border-radius: 5px;
-    margin-left: 30px;
 }
 .weatherExtraInfoCont{
     width: 40%;
@@ -26,12 +25,12 @@
 
 .temperatureType{
     font-weight: bold;
-    color: blueviolet;
+    color: rgb(32, 24, 39);
 }
 
 .extraInfoText{
     display: block;
-    color: aqua;
+    color: rgb(25, 0, 255);
     font-size: 16px;
     font-weight: bold;
 }

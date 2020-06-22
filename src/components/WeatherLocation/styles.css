@@ -1,9 +1,13 @@
+/*
+https://www.cssmatic.com
+*/
+
 .locationCont{
     width: 100%;
     height: 35px;
     text-align:  left;
     padding-left: 10px;
-    color: rgb(65, 65, 62);
+    color: #888;
     line-height: 35px;
 }
 
@@ -11,9 +15,9 @@
     margin: 0;
 }
 
-.weatherlocationCont{
+.weatherLocationCont{
     width: 400px;
-    padding: 15px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    box-shadow: 10px 10px 40px 40px black;
+    padding: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 10px 10px 40px 12px rgba(0, 0, 0, 0.75);
 }
