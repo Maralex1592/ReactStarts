@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import convert from 'convert-units'
 import Location from './Location'
 import WeatheData from './WeatherData'
 import './styles.css';
@@ -11,6 +12,7 @@ const location = "Poland,pl";
 const api_key = "6edc65645385be69e0675fe8b6852258";
 const url_base_weather = "http://api.openweathermap.org/data/2.5/weather";
 
+//const api_weather = `${url_base_weather}?q=${location}&appid=${api_key}&units=metric`;
 const api_weather = `${url_base_weather}?q=${location}&appid=${api_key}`;
 
 const data = {
@@ -35,14 +37,19 @@ class WeatherLocation extends Component{
         return CLOUDY;
     }
 
+    getTemp = kelvin => {
+        return Number(convert(kelvin).from("K").to("C").toFixed(2));
+    }
+
     getData = weather_data =>{
         const{humidity, temp} = weather_data.main;
         const {speed} = weather_data.wind;
-        const weatherState = CLOUDY;
+        const weatherState = this.getWeatherState(weather_data);
+        const temperature = this.getTemp(temp);
 
         const data = {
             humidity,
-            temperature: temp,
+            temperature,
             weatherState,
             wind: `${speed} m/s`,
         }
@@ -55,12 +62,10 @@ class WeatherLocation extends Component{
         }).then(data => {
             const newWeather = this.getData(data)
             console.log(newWeather);
-            debugger;
             this.setState({
                 data:newWeather
             })
             console.log(data);
-            debugger;
         });
         console.log("Update Button clicked");     
     }
