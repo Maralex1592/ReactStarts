@@ -25,6 +25,22 @@ class WeatherLocation extends Component{
             city : 'Cambridge',
             data : data,
         };
+        console.log("constructor");
+    }
+
+    //cdm
+    componentDidMount() {
+        console.log("componentDidMount");
+    }
+    
+    //cdup
+    componentDidUpdate(prevProps, prevState) {
+        console.log("UNSAFE componentDidUpdate");
+    }
+
+    //cdw
+    componentWillMount() {
+        console.log("UNSAFE componentWillMount");
     }
 
     //Inside of a Class Component, you have to use "this." to call a function
@@ -33,15 +49,14 @@ class WeatherLocation extends Component{
             return resolve.json();
         }).then(data => {
             const newWeather = transformWeather(data)
-            console.log(newWeather);
             this.setState({
                 data:newWeather
             })
-            console.log(data);
         });
         console.log("Update Button clicked");     
     }
   render(){
+    console.log("render");
       const { city, data } = this.state;
       return(
         <div className="weatherLocationCont">
