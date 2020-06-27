@@ -9,13 +9,6 @@ import {
     WINDY
 } from './../../constants/weather';
 
-const data = {
-    temperature : 45,
-    weatherState : WINDY,
-    humidity : 20,
-    wind : '220 km/h', 
-}
-
 //This is a Class Component
 class WeatherLocation extends Component{
 
@@ -23,7 +16,7 @@ class WeatherLocation extends Component{
         super();
         this.state = {
             city : 'Cambridge',
-            data : data,
+            data : null,
         };
         console.log("constructor");
     }
@@ -31,16 +24,12 @@ class WeatherLocation extends Component{
     //cdm
     componentDidMount() {
         console.log("componentDidMount");
+        this.handleUpdateClick();
     }
     
     //cdup
     componentDidUpdate(prevProps, prevState) {
         console.log("UNSAFE componentDidUpdate");
-    }
-
-    //cdw
-    componentWillMount() {
-        console.log("UNSAFE componentWillMount");
     }
 
     //Inside of a Class Component, you have to use "this." to call a function
@@ -61,8 +50,7 @@ class WeatherLocation extends Component{
       return(
         <div className="weatherLocationCont">
         <Location city= {city}></Location>
-        <WeatheData data={data}></WeatheData>
-        <button onClick={this.handleUpdateClick}>Actualizar</button>
+        {data ?<WeatheData data={data}></WeatheData> :  "Cargando..."}
         </div>
       );
   }
