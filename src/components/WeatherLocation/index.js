@@ -4,7 +4,6 @@ import CircularProgress from '@material-ui/core/CircularProgress'
 import {PropTypes} from 'prop-types'
 import getUrlWeatherByCity from './../../services/getUrlWeatherByCity'
 //Use brackets where the file to import doesn't use 'default'
-import {api_weather} from './../../constants/api_url'
 import Location from './Location'
 import WeatheData from './WeatherData'
 import './styles.css';
