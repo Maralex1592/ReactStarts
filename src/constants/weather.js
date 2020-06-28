@@ -1,6 +1,6 @@
-export const SUNNY = "day-sunny";
-export const FOG = "day-fog";
-export const CLOUDY = "day-cloudy";
-export const THUNDERSTORM = "day-thunderstorm";
-export const WINDY = "day-windy";
+export const SUN = "sun";
+export const CLOUD = "cloud";
 export const RAIN = "rain";
+export const SNOW = "snow";
+export const THUNDER = "thunder";
+export const DRIZZLE = "drizzle";

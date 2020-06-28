@@ -19,18 +19,15 @@ class WeatherLocation extends Component{
             city ,
             data : null,
         };
-        console.log("constructor");
     }
 
     //cdm
     componentDidMount() {
-        console.log("componentDidMount");
         this.handleUpdateClick();
     }
     
     //cdup
     componentDidUpdate(prevProps, prevState) {
-        console.log("UNSAFE componentDidUpdate");
     }
 
     //Inside of a Class Component, you have to use "this." to call a function
@@ -44,10 +41,8 @@ class WeatherLocation extends Component{
                 data:newWeather
             })
         });
-        console.log("Update Button clicked");     
     }
   render(){
-    console.log("render");
       const { city, data } = this.state;
       return(
         <div className="weatherLocationCont">
